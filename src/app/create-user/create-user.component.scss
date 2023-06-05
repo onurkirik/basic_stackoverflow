@@ -1,0 +1,22 @@
+.loginBtn {
+    min-width: 100px;
+    max-width: 100px;
+    margin-left: 38%;
+}
+
+.registerBtn:hover {
+    background-color: transparent !important;
+    box-shadow: none;
+    color: inherit;
+}
+
+.loginContainer {
+    margin-top: 10%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    background-color: #fff;
+}

@@ -1,0 +1,37 @@
+<div class="container w-25 loginContainer p-4 card">
+    <form [formGroup]="_loginForm">
+        <p class="fw-bold text-center fs-4 mb-4">GİRİŞ</p>
+        <div class="row">
+            <mat-form-field floatLabel="auto" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Emailinizi Giriniz" formControlName="email">
+                <mat-error class="error">
+                    <p *ngIf="f['email'].errors && f['email'].errors['required']">Mail alanını doldurmak zorunludur.
+                    </p>
+                    <p *ngIf="f['email'].errors && f['email'].errors['email']">Lütfen uygun formatta yazınız.
+                    </p>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field floatLabel="auto" appearance="outline">
+                <mat-label>Şifre</mat-label>
+                <input type="password" matInput placeholder="Şifrenizi giriniz" formControlName="password">
+                <mat-error class="error">
+                    <p *ngIf="f['password'].errors && f['password'].errors['required']">Şifre alanını doldurmak
+                        zorunludur.
+                    </p>
+                    <p *ngIf="f['password'].errors && f['password'].errors['minlength']">Gerekli karakter sayısını
+                        sağlamak zorundasınız.
+                    </p>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="row container w-100">
+            <button [disabled]="_loginForm.invalid" class="loginBtn" mat-raised-button color="warn">Giriş Yap</button>
+            <p class="text-center fw-bold fs-6 mt-4">Veya</p>
+            <a routerLink="/create-user" class="registerBtn" mat-button>Hesap Oluştur</a>
+        </div>
+    </form>
+    <router-outlet></router-outlet>
+</div>
