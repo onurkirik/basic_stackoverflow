@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-create-user',
@@ -15,13 +16,20 @@ export class CreateUserComponent {
   })
 
   constructor(
-    private _formBuilder: FormBuilder
+    private _formBuilder: FormBuilder,
+    private _userService: UserService
   ) { }
 
   ngOnInit(): void { }
 
   get f(): { [key: string]: AbstractControl } {
     return this._createUserForm.controls;
+  }
+
+  public createAccount() {
+    this._userService.createAccount(this._createUserForm.value).subscribe((res) => {
+      console.log(res);
+    });
   }
 
 }

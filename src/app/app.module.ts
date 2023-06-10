@@ -11,13 +11,19 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BaseService } from './services/base.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HomeComponent } from './home/home.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +33,12 @@ import { CreateUserComponent } from './create-user/create-user.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

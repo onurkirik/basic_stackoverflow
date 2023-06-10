@@ -7,7 +7,8 @@
                 <input type="email" matInput placeholder="Emailinizi Giriniz" formControlName="email">
                 <mat-error>
                     <p *ngIf="f['email'].errors && f['email'].errors['email']">Email formatı yanlış</p>
-                    <p *ngIf="f['email'].errors && f['email'].errors['required']">Email alanını doldurmak zorundasınız</p>
+                    <p *ngIf="f['email'].errors && f['email'].errors['required']">Email alanını doldurmak zorundasınız
+                    </p>
                 </mat-error>
             </mat-form-field>
         </div>
@@ -16,8 +17,10 @@
                 <mat-label>Username</mat-label>
                 <input type="email" matInput placeholder="Kullanıcı adınızı giriniz" formControlName="username">
                 <mat-error>
-                    <p *ngIf="f['username'].errors && f['username'].errors['required']">Username alanını doldurmak zorunludur</p>
-                    <p *ngIf="f['username'].errors && f['username'].errors['minlength']">Gerekli karakter sayısını doldurmak zorundasın</p>
+                    <p *ngIf="f['username'].errors && f['username'].errors['required']">Username alanını doldurmak
+                        zorunludur</p>
+                    <p *ngIf="f['username'].errors && f['username'].errors['minlength']">Gerekli karakter sayısını
+                        doldurmak zorundasın</p>
                 </mat-error>
             </mat-form-field>
         </div>
@@ -26,14 +29,16 @@
                 <mat-label>Şifre</mat-label>
                 <input type="password" matInput placeholder="Şifrenizi giriniz" formControlName="password">
                 <mat-error>
-                    <p *ngIf="f['password'].errors && f['password'].errors['required']">Parola alanını doldurmak zorundasın</p>
-                    <p *ngIf="f['password'].errors && f['password'].errors['minlength']">Gerekli karakter sayısını sağlamak zorundasın</p>
+                    <p *ngIf="f['password'].errors && f['password'].errors['required']">Parola alanını doldurmak
+                        zorundasın</p>
+                    <p *ngIf="f['password'].errors && f['password'].errors['minlength']">Gerekli karakter sayısını
+                        sağlamak zorundasın</p>
                 </mat-error>
             </mat-form-field>
         </div>
         <div class="row container w-100">
             <button [disabled]="_createUserForm.invalid" routerLink="/login" class="loginBtn" mat-raised-button
-                color="warn">Kayıt Ol</button>
+                color="warn" (click)="createAccount()">Kayıt Ol</button>
             <p class="text-center fw-bold fs-6 mt-4">Veya</p>
             <button routerLink="/login" class="registerBtn" mat-button>Giriş Yap</button>
         </div>

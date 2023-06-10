@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "email": "kirikonurr@gmail.com",
+      "username": "kirikonurr",
+      "password": "123456789",
+      "id": 1
+    }
+  ],
+  "questions": [
+    {
+      "username": "kirikonurr",
+      "question": "Test-1",
+      "solutions": [],
+      "id": 1
+    },
+    {
+      "username": "kirikonurr",
+      "question": "Test-2",
+      "solutions": [],
+      "id": 2
+    },
+    {
+      "username": "kirikonurr",
+      "question": "Test-3",
+      "solutions": [],
+      "id": 3
+    },
+    {
+      "username": "kirikonurr",
+      "question": "Test-3",
+      "solutions": [],
+      "id": 4
+    },
+    {
+      "username": "kirikonurr",
+      "question": "Test-4",
+      "solutions": [],
+      "id": 5
+    },
+    {
+      "username": "kirikonurr",
+      "question": "Test-5",
+      "solutions": [],
+      "id": 6
+    }
+  ]
+}

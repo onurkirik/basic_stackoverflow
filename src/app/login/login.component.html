@@ -28,7 +28,7 @@
             </mat-form-field>
         </div>
         <div class="row container w-100">
-            <button [disabled]="_loginForm.invalid" class="loginBtn" mat-raised-button color="warn">Giriş Yap</button>
+            <button class="loginBtn" mat-raised-button color="warn" (click)="loginAccount()" >Giriş Yap</button>
             <p class="text-center fw-bold fs-6 mt-4">Veya</p>
             <a routerLink="/create-user" class="registerBtn" mat-button>Hesap Oluştur</a>
         </div>
