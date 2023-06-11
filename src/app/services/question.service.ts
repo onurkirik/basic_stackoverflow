@@ -20,4 +20,8 @@ export class QuestionService extends BaseService {
         return this.getReq('/questions');
     }
 
+    public getQuestionById(id: any) {
+        return this.getReq('/questions?id=' + id)
+    }
+
 }

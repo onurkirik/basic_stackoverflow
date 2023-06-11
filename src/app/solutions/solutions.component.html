@@ -1,0 +1,33 @@
+<h1 class="my-4">İstediğiniz soruya cevap verebilirsiniz</h1>
+<div class="row justify-content-center w-100 mt-4">
+    <mat-card class="question-card justify-content-center">
+        <mat-card-header>
+            <div class="row">
+                <div class="col-4 mb-2">
+                    <button class="fs-5" mat-icon-button><mat-icon class="fs-2">expand_less</mat-icon></button>
+                    <p style="margin-left: 21px;" class="fs-4 mt-3">2</p>
+                    <button mat-icon-button><mat-icon class="fs-2">expand_more</mat-icon></button>
+                </div>
+                <div class="col-8 mt-3">
+                    <h1>{{question.username}}</h1>
+                    <h3>{{question.question}}</h3>
+                </div>
+            </div>
+        </mat-card-header>
+    </mat-card>
+
+
+    <div class="row w-100 justify-content-center mt-4 d-flex">
+        <mat-form-field class="solution-container mt-3" appearance="outline">
+            <mat-label>Cevabınızı yazınız</mat-label>
+            <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="5"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="solution-container justify-content-between mt-4 d-flex">
+            <button class="float-end" mat-raised-button color="accent">Geri Dön</button>
+            <button class="float-end" mat-raised-button color="warn">Kaydet</button>
+    </div>
+
+
+</div>

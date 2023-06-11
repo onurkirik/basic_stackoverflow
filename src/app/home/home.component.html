@@ -10,7 +10,8 @@
                 class="post-button mb-3">Sor</button>
         </div>
 
-        <mat-card *ngFor="let question of questionList" class="question-card mb-2">
+        <mat-card *ngFor="let question of questionList" class="question-card mb-4"
+            [routerLink]="'/solutions/' + question.id">
             <mat-card-content>
                 <p class="username">{{question.username}}</p>
                 <p>
